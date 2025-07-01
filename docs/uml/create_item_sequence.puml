@@ -1,0 +1,16 @@
+@startuml create_item_sequence
+
+actor User
+participant ItemForm
+participant ItemController
+participant Database
+
+== Create Item Flow ==
+
+User -> ItemForm : input name & description
+ItemForm -> ItemController : submit()
+ItemController -> Database : insert new item
+Database --> ItemController : confirmation
+ItemController --> User : redirect to item list
+
+@enduml
