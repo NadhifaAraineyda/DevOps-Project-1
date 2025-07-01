@@ -1,0 +1,156 @@
+{
+  "id": "8cc5c4b5-c43e-4105-9f74-4daf5a797e8b",
+  "version": "2.0",
+  "name": "PROJECTUAS",
+  "url": "https://automatic-space-spork-x59rvq5447gjf67v-5000.app.github.dev",
+  "tests": [{
+    "id": "222301e9-26d8-4bc1-b227-02faf346e139",
+    "name": "LOGIN ADD",
+    "commands": [{
+      "id": "86936f9e-9248-4176-a96b-72a8d229e45d",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "854a3b8e-076d-4aa0-8a1c-d66ba17fbd53",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1270x680",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e826faf-18a1-4979-a4cd-c8627592a43f",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here to see listing",
+      "targets": [
+        ["linkText=Click here to see listing", "linkText"],
+        ["css=p:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here to see listing')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/view')]", "xpath:href"],
+        ["xpath=//a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here to see listing')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e86f0d2-6943-4c21-bc9a-154862de7ed3",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here to add a listing",
+      "targets": [
+        ["linkText=Click here to add a listing", "linkText"],
+        ["css=p:nth-child(7) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here to add a listing')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/add')]", "xpath:href"],
+        ["xpath=//p[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here to add a listing')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "78ee9133-6ad7-48d4-8561-f4cd976fbd42",
+      "comment": "",
+      "command": "click",
+      "target": "id=ownername",
+      "targets": [
+        ["id=ownername", "id"],
+        ["name=ownername", "name"],
+        ["css=#ownername", "css:finder"],
+        ["xpath=//input[@id='ownername']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "05675462-be5a-4a3f-a4cd-62ea6a0b8124",
+      "comment": "",
+      "command": "type",
+      "target": "id=ownername",
+      "targets": [
+        ["id=ownername", "id"],
+        ["name=ownername", "name"],
+        ["css=#ownername", "css:finder"],
+        ["xpath=//input[@id='ownername']", "xpath:attributes"],
+        ["xpath=//input[2]", "xpath:position"]
+      ],
+      "value": "NADHIFA"
+    }, {
+      "id": "3e912c9b-72e4-48f8-999a-194ccde114bf",
+      "comment": "",
+      "command": "click",
+      "target": "id=businessname",
+      "targets": [
+        ["id=businessname", "id"],
+        ["name=businessname", "name"],
+        ["css=#businessname", "css:finder"],
+        ["xpath=//input[@id='businessname']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2136f39a-0542-4ea2-804d-27cf87507935",
+      "comment": "",
+      "command": "type",
+      "target": "id=businessname",
+      "targets": [
+        ["id=businessname", "id"],
+        ["name=businessname", "name"],
+        ["css=#businessname", "css:finder"],
+        ["xpath=//input[@id='businessname']", "xpath:attributes"],
+        ["xpath=//input[3]", "xpath:position"]
+      ],
+      "value": "ZAHRA"
+    }, {
+      "id": "5c3b58f2-c14e-4e6c-a757-036ecd6066be",
+      "comment": "",
+      "command": "click",
+      "target": "id=submit",
+      "targets": [
+        ["id=submit", "id"],
+        ["name=submit", "name"],
+        ["css=#submit", "css:finder"],
+        ["xpath=//input[@id='submit']", "xpath:attributes"],
+        ["xpath=//input[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2e34c15-74e2-4e8d-be9c-b12c8061f451",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here to edit your listing",
+      "targets": [
+        ["linkText=Click here to edit your listing", "linkText"],
+        ["css=p:nth-child(9) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here to edit your listing')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/update')]", "xpath:href"],
+        ["xpath=//p[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here to edit your listing')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6eb01653-0fdd-47e2-9af4-b875f1f5efcb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Click here to delete your listing",
+      "targets": [
+        ["linkText=Click here to delete your listing", "linkText"],
+        ["css=p:nth-child(11) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Click here to delete your listing')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/delete')]", "xpath:href"],
+        ["xpath=//p[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Click here to delete your listing')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f164112d-8491-44f5-a67e-996dfb1eebc7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["222301e9-26d8-4bc1-b227-02faf346e139"]
+  }],
+  "urls": ["https://automatic-space-spork-x59rvq5447gjf67v-5000.app.github.dev/"],
+  "plugins": []
+}
