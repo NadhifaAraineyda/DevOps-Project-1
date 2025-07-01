@@ -1,0 +1,16 @@
+@startuml login_sequence
+
+actor User
+participant LoginForm
+participant UserController
+participant Database
+
+== Login Flow ==
+
+User -> LoginForm : input username/password
+LoginForm -> UserController : validate()
+UserController -> Database : authenticate(username, password)
+Database --> UserController : result (valid/invalid)
+UserController --> User : redirect to dashboard / show error
+
+@enduml

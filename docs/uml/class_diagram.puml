@@ -1,0 +1,79 @@
+@startuml class_diagram
+
+' ======================
+' CLASS DIAGRAM FOR DEVOPS-PROJECT-1
+' ======================
+
+' === Entities ===
+class User {
+  +id: int
+  +username: String
+  +password: String
+  +login(): void
+  +logout(): void
+}
+
+class Item {
+  +id: int
+  +name: String
+  +description: String
+  +create(): void
+  +update(): void
+  +delete(): void
+}
+
+class LoginForm {
+  +username: String
+  +password: String
+  +remember_me: Boolean
+  +validate(): Boolean
+}
+
+class ItemForm {
+  +name: String
+  +description: TextAreaField
+  +submit: SubmitField
+}
+
+class UserController {
+  +register(): void
+  +authenticate(): Boolean
+  +get_profile(): User
+}
+
+class ItemController {
+  +create_item(): void
+  +update_item(): void
+  +delete_item(): void
+}
+
+class Database {
+  +engine: String
+  +session: Session
+  +connect(): void
+  +query(): List
+}
+
+' === Relationships ===
+User "1" --> "0..*" Item : owns >
+User --> LoginForm : <<uses>>
+Item --> ItemForm : <<uses>>
+UserController --> User : <<manages>>
+ItemController --> Item : <<manages>>
+UserController --> Database : <<uses>>
+ItemController --> Database : <<uses>>
+
+' === Notes ===
+note top of User : Core user entity\nStored in PostgreSQL
+note right of Item : All application items\nwith CRUD operations
+note left of Database : Handles all DB operations\nvia SQLAlchemy
+
+' === Styling ===
+skinparam class {
+  BackgroundColor White
+  BorderColor #444
+  ArrowColor #666
+  FontName "Arial"
+}
+
+@enduml
